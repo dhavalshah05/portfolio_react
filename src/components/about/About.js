@@ -9,8 +9,7 @@ const About = () => {
                     I am an application developer having 5+ years of experience, who build apps which are simple in
                     terms of UX
                     and rich in terms of UI and functionality.
-                    &nbsp;Currently, I am focused on building beautiful apps using <span
-                    className="text-[#FF8578] cursor-pointer">Jetpack Compose.</span>
+                    &nbsp;Currently, I am focused on building beautiful apps using <a href={"https://developer.android.com/jetpack/compose"} target={"_blank"} rel={"noreferrer"} className="text-[#FF8578] cursor-pointer">Jetpack Compose.</a>
                 </p>
             </div>
         </section>
