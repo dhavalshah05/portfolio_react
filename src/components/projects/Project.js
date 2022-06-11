@@ -1,8 +1,8 @@
 import React from "react";
 
 const Project = (props) => {
-    const imageOrder = props.reversed ? "order-last" : "order-first"
-    const detailOrder = props.reversed ? "order-first" : "order-last"
+    const imageOrder = props.reversed ? "md:order-last" : "md:order-first"
+    const detailOrder = props.reversed ? "md:order-first" : "md:order-last"
 
     return (
         <div className={`${props.className} md:mt-[60px]`}>

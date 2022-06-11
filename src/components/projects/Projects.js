@@ -28,12 +28,13 @@ const Projects = () => {
     return (
         <section className="section-container flex flex-col items-center md:items-start">
             <h2 className="text-[#132C47] section-header">What I have created?</h2>
-            <Project className={"mt-[1px]"} project={projectItems[0]} />
-            <Project className={"mt-[40px]"} project={projectItems[1]} reversed={true} />
-            <Project className={"mt-[40px]"} project={projectItems[2]} />
-            <Project className={"mt-[40px]"} project={projectItems[3]} reversed={true} />
+            {
+                projectItems.map((item, index) => <Project className={index === 0 ? "mt-[1px]" : "mt-[40px]"} project={item} reversed={index % 2 !== 0} /> )
+            }
         </section>
     );
 };
+
+
 
 export default Projects;
