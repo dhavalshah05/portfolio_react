@@ -3,10 +3,14 @@ import ReactDOM from "react-dom";
 import "./index.css";
 
 import Header from "./components/header/Header";
+import About from "./components/about/About";
 
 const App = () => {
     return (
-        <Header />
+        <div>
+            <Header />
+            <About />
+        </div>
     );
 };
 
