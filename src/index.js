@@ -2,8 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 
+import Header from "./components/header/Header";
+
 const App = () => {
-    return <h1 className={"font-lato"}>Hello World</h1>
+    return (
+        <Header />
+    );
 };
 
 ReactDOM.render(
