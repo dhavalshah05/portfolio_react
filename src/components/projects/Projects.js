@@ -5,22 +5,26 @@ const projectItems = [
     {
         projectName: 'KidCare',
         projectImage: 'kidcare.png',
-        projectDescription: "It helps parents to find care givers for their children. It shows people based on reviews and location of the parent."
+        projectDescription: "It helps parents to find care givers for their children. It shows people based on reviews and location of the parent.",
+        projectUrl: 'https://play.google.com/store/apps/details?id=com.kidcare.parent'
     },
     {
         projectName: 'Navex',
         projectImage: 'navex.png',
-        projectDescription: "It helps users to virtually see the exhibition map so they can know where the particular shop or store is located. On top of that, users can buy items from running exhibitions."
+        projectDescription: "It helps users to virtually see the exhibition map so they can know where the particular shop or store is located. On top of that, users can buy items from running exhibitions.",
+        projectUrl: 'https://play.google.com/store/apps/details?id=com.navex.app'
     },
     {
         projectName: 'Reelvolution',
         projectImage: 'reelvolution.png',
-        projectDescription: "Different fishing leagues can be organised using this application. Users can participate in the running competitions and they can win exiting prices."
+        projectDescription: "Different fishing leagues can be organised using this application. Users can participate in the running competitions and they can win exiting prices.",
+        projectUrl: 'https://play.google.com/store/apps/details?id=com.reelvolution.app'
     },
     {
         projectName: 'Auto Redial',
         projectImage: 'auto-redial.png',
-        projectDescription: "It redials a given number until it gets connected. Users can tweak some settings to change auto redial time and other things."
+        projectDescription: "It redials a given number until it gets connected. Users can tweak some settings to change auto redial time and other things.",
+        projectUrl: ''
     }
 ]
 
