@@ -42,9 +42,9 @@ const ProjectActionLink = (props) => {
             text-[14px]
             text-[#8495A0] hover:text-white
             border
-            border-[#8495A0]
+            border-[#8495A0] hover:border-[#132C47]
             rounded-[4px]
-            bg-white hover:bg-[#8495A0]
+            bg-white hover:bg-[#132C47]
             cursor-pointer"
            href={props.projectUrl} target={"_blank"} rel={"noreferrer"}
         >
