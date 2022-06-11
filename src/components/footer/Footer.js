@@ -10,7 +10,6 @@ const Footer = () => {
                         <FooterItem href="https://github.com/dhavalshah05" icon={"icon-github.svg"} />
                         <FooterItem href="https://twitter.com/_shahdhaval" icon={"icon-twitter.svg"} />
                         <FooterItem href="https://www.linkedin.com/in/dhavalshah53" icon={"icon-linkedin.svg"} />
-                        <FooterItem href="" icon={"icon-mail.svg"} />
                     </div>
                 </div>
             </section>
