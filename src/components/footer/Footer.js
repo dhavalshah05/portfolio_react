@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <div className="bg-[#F2F8FC]">
+        <div className="bg-[#F2F8FC]" id={"Contact"}>
             <section className="section-container">
                 <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-[30px]">
                     <h2 className="text-[#132C47] section-header text-center">Where to contact me?</h2>

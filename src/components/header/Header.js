@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 class Header extends React.Component {
     render() {
@@ -6,9 +7,15 @@ class Header extends React.Component {
             <div>
                 <section className="section-container !py-[30px] md:!pr-[10px]">
                     <ul className="flex flex-row justify-center md:justify-end gap-[15px] md:gap-[30px]">
-                        <NavItem title={"About"} selected={true}/>
-                        <NavItem title={"Projects"} selected={false} />
-                        <NavItem title={"Contact"} selected={false} />
+                        <NavItem title={"About"}
+                                 selected={this.props.selectedItem === 'About'}
+                                 onClick={() => this.props.onNavItemClick('About')} />
+                        <NavItem title={"Projects"}
+                                 selected={this.props.selectedItem === 'Projects'}
+                                 onClick={() => this.props.onNavItemClick('Projects')} />
+                        <NavItem title={"Contact"}
+                                 selected={this.props.selectedItem === 'Contact'}
+                                 onClick={() => this.props.onNavItemClick('Contact')}/>
                     </ul>
                 </section>
                 <section className="section-container relative">
@@ -30,13 +37,24 @@ class Header extends React.Component {
     }
 }
 
+Header.propTypes = {
+    selectedItem: PropTypes.string,
+    onNavItemClick: PropTypes.func,
+}
+
 const NavItem = (props) => {
     const selectedClass = props.selected ? "nav-item__selected" : "nav-item__normal"
     return (
-        <li className={`nav-item ${selectedClass}`}>
+        <li className={`nav-item ${selectedClass}`} onClick={props.onClick}>
             {props.title}
         </li>
     );
+}
+
+NavItem.propTypes = {
+    onClick: PropTypes.func,
+    selected: PropTypes.bool,
+    title: PropTypes.string
 }
 
 export default Header;
