@@ -14,7 +14,8 @@ class Header extends React.Component {
     }
 
     render() {
-        const headerHeight = `mt-[${this.state.headerHeight}px]`
+        const headerHeight = this.state.headerHeight === null ? '' : `mt-[${this.state.headerHeight}px]`
+
         return (
             <div>
                 <section id={"nav-header"} className="!py-[30px] md:!pr-[10px] bg-white p-[30px] md:p-[60px] fixed top-0 left-0 right-0 z-10">
