@@ -17,19 +17,21 @@ class Header extends React.Component {
         const headerHeight = this.state.headerHeight === null ? '' : `mt-[${this.state.headerHeight}px]`
 
         return (
-            <div>
-                <section id={"nav-header"} className="!py-[30px] md:!pr-[10px] bg-white p-[30px] md:p-[60px] fixed top-0 left-0 right-0 z-10">
-                    <ul className="flex flex-row justify-center md:justify-end gap-[15px] md:gap-[30px]">
-                        <NavItem title={"About"}
-                                 selected={this.props.selectedItem === 'About'}
-                                 onClick={() => this.props.onNavItemClick('About')} />
-                        <NavItem title={"Projects"}
-                                 selected={this.props.selectedItem === 'Projects'}
-                                 onClick={() => this.props.onNavItemClick('Projects')} />
-                        <NavItem title={"Contact"}
-                                 selected={this.props.selectedItem === 'Contact'}
-                                 onClick={() => this.props.onNavItemClick('Contact')}/>
-                    </ul>
+            <div id={"About"}>
+                <section id={"nav-header"} className="bg-white fixed top-0 left-0 right-0 z-10">
+                    <div className={"py-[20px] md:py-[30px] max-w-[1100px] mx-auto md:pr-[20px]"}>
+                        <ul className="flex flex-row justify-center md:justify-end gap-[15px] md:gap-[30px]">
+                            <NavItem title={"About"}
+                                     selected={this.props.selectedItem === 'About'}
+                                     onClick={() => this.props.onNavItemClick('About')} />
+                            <NavItem title={"Projects"}
+                                     selected={this.props.selectedItem === 'Projects'}
+                                     onClick={() => this.props.onNavItemClick('Projects')} />
+                            <NavItem title={"Contact"}
+                                     selected={this.props.selectedItem === 'Contact'}
+                                     onClick={() => this.props.onNavItemClick('Contact')}/>
+                        </ul>
+                    </div>
                 </section>
                 <section className={`section-container relative ${headerHeight}`}>
                     <div className="flex flex-col items-center md:items-start">
