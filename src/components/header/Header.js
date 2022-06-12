@@ -14,7 +14,7 @@ class Header extends React.Component {
     }
 
     render() {
-        const headerHeight = this.state.headerHeight === null ? '' : `mt-[${this.state.headerHeight}px]`
+        const topMargin = this.state.headerHeight === null ? {} : { marginTop: `${this.state.headerHeight}px` }
 
         return (
             <div id={"About"}>
@@ -33,7 +33,7 @@ class Header extends React.Component {
                         </ul>
                     </div>
                 </section>
-                <section className={`section-container relative ${headerHeight}`}>
+                <section className={`section-container relative`} style={topMargin}>
                     <div className="flex flex-col items-center md:items-start">
                         <h1 className="font-lato font-black text-center md:text-left text-[#132C47] text-[40px] md:text-[70px] leading-[1.10]">I'm<br/><span
                             className="text-[#616AF2]">Dhaval Shah</span></h1>
