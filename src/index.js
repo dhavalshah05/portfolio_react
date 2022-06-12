@@ -14,8 +14,13 @@ class AppComponent extends React.Component {
     }
 
     bindNavItem(navItem) {
-        document.querySelector(`#${navItem}`)
-            .scrollIntoView({ behavior: "smooth" });
+        const elementToScroll = document.getElementById(navItem);
+        const elementHeader = document.getElementById("nav-header");
+
+        window.scroll({
+            top: elementToScroll.offsetTop - elementHeader.clientHeight,
+            behavior: "smooth"
+        })
 
         this.setState({
             selectedItem: navItem
@@ -32,7 +37,7 @@ class AppComponent extends React.Component {
             </div>
         );
     }
-};
+}
 
 ReactDOM.render(
     <AppComponent />,

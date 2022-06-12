@@ -2,10 +2,22 @@ import React from "react";
 import PropTypes from 'prop-types';
 
 class Header extends React.Component {
+
+    state = {
+        headerHeight: null
+    }
+
+    componentDidMount() {
+        this.setState({
+            headerHeight: document.getElementById("nav-header").clientHeight
+        })
+    }
+
     render() {
+        const headerHeight = `mt-[${this.state.headerHeight}px]`
         return (
             <div>
-                <section className="section-container !py-[30px] md:!pr-[10px]">
+                <section id={"nav-header"} className="!py-[30px] md:!pr-[10px] bg-white p-[30px] md:p-[60px] fixed top-0 left-0 right-0 z-10">
                     <ul className="flex flex-row justify-center md:justify-end gap-[15px] md:gap-[30px]">
                         <NavItem title={"About"}
                                  selected={this.props.selectedItem === 'About'}
@@ -18,7 +30,7 @@ class Header extends React.Component {
                                  onClick={() => this.props.onNavItemClick('Contact')}/>
                     </ul>
                 </section>
-                <section className="section-container relative">
+                <section className={`section-container relative ${headerHeight}`}>
                     <div className="flex flex-col items-center md:items-start">
                         <h1 className="font-lato font-black text-center md:text-left text-[#132C47] text-[40px] md:text-[70px] leading-[1.10]">I'm<br/><span
                             className="text-[#616AF2]">Dhaval Shah</span></h1>
