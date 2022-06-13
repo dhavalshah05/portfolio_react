@@ -33,7 +33,7 @@ const Projects = () => {
         <section className="section-container flex flex-col items-center md:items-start" id={"Projects"}>
             <h2 className="text-[#132C47] section-header text-center">What I have created?</h2>
             {
-                projectItems.map((item, index) => <Project className={index === 0 ? "mt-[1px]" : "mt-[40px]"} project={item} reversed={index % 2 !== 0} /> )
+                projectItems.map((item, index) => <Project key={item.projectName} className={index === 0 ? "mt-[1px]" : "mt-[40px]"} project={item} reversed={index % 2 !== 0} /> )
             }
         </section>
     );
