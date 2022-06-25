@@ -40,7 +40,7 @@ const Header = (props) => {
                     </button>
                 </div>
                 <img src="/images/background.svg"
-                     alt={"background image"}
+                     alt={"background"}
                      className="absolute bottom-0 right-0 object-cover w-[300px] lg:w-[350px] md:visible invisible -z-10"/>
             </section>
         </div>
