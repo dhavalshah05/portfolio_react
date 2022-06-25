@@ -19,8 +19,8 @@ const Footer = () => {
 
 const FooterItem = (props) => {
   return (
-      <a href={props.href} target="_blank">
-          <img alt="" src={`/images/icons/${props.icon}`}
+      <a rel={"noopener"} href={props.href} target="_blank">
+          <img alt="footer icon" src={`/images/icons/${props.icon}`}
                className="h-[40px] w-[40px] md:h-[60px] md:w-[60px]" />
       </a>
   );
